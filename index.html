@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>class</title>
+
+</head>
+<style>
+#sor{
+   display: none; 
+}
+input{
+margin: 10px;
+
+}
+
+</style>
+
+
+<body>
+<center>
+  <h3> Student Registration web application</h3> 
+  <div>
+<span>1</span> <input type="text" placeholder="Name of the student" id="s1">
+<br>
+<span>2</span> <input type="text" placeholder="Name of the student" id="s2">
+<br>
+<span>3</span> <input type="text" placeholder="Name of the student" id="s3">
+<br>
+<span>4</span> <input type="text" placeholder="Name of the student" id="s4">
+<br>
+<button id="sub" onclick="submit()">submit</button>
+<h4 id="Display1"></h4>
+<button id="sor" onclick="Sort()">Sort</button>
+  </div>
+</center>
+
+
+</body>
+
+
+<script>
+var snames = [];
+
+function submit(){
+var n1=document.getElementById('s1').value;
+var n2=document.getElementById('s2').value;
+var n3=document.getElementById('s3').value;
+var n4=document.getElementById('s4').value;
+
+snames.push(n1);
+snames.push(n2);
+snames.push(n3);
+snames.push(n4);
+console.log(snames);
+document.getElementById('Display1').innerHTML = snames;
+document.getElementById('sub').style.display = 'none';
+document.getElementById('sor').style.display = 'inline';
+}
+function Sort(){
+snames.sort();
+console.log(snames);
+document.getElementById('Display1').innerHTML = snames;
+}
+
+
+
+
+</script>
+
+</html>
